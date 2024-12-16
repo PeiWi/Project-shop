@@ -13,11 +13,12 @@ module.exports = class Products {
   // CREATE
 
   static add(req, res) {
-
+    console.log(req.body.pname, req.body.price, req.body.cid, req.body.editor1)
     return db.execute(
       'INSERT INTO product (pname, price, cid, detail) VALUE (?, ?, ?, ?)',
-      [req.body.pname, req.body.price, req.body,cid, req.body.editor1]
+      [req.body.pname, req.body.price, req.body.cid, req.body.editor1]
     );
+
   }
 
   // READ

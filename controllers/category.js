@@ -38,17 +38,16 @@ exports.getEditCategory = async (req, res, next) => {
 
 };
 
-exports.postAddCategory = (req, res, next) => {
-
-    Category.add(req, res)
-        .then(([rows]) => {
-            res.redirect('/category');
-        })
-        .catch(err => console.log(err));
-};
-
-
-
+exports.postAddCategory = async (req, res, next) => {
+    try {
+      await Category.add(req);
+      console.log(req, res)
+      res.redirect('/category');
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  
 exports.postUpdatecategory = (req, res, next) => {
 
     Category.updateById(req, res)

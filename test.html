@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind RWD Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-teal-500 text-white text-center py-4">
+      <h1 class="text-2xl sm:text-3xl font-semibold">響應式設計範例</h1>
+    </header>
+    <!-- Main Content -->
+    <main class="p-6">
+      <!-- Introduction Section -->
+      <section class="mb-8 text-center">
+        <p class="text-lg sm:text-xl md:text-2xl">
+          響應式設計範例,頁面會根據螢幕大小調整佈局。
+        </p>
+      </section>
+      <!-- Responsive Grid Section -->
+      <section class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          class="bg-white p-6 shadow rounded-lg hover:shadow-lg transition-shadow"
+        >
+          <h2 class="text-teal-500 text-xl font-semibold mb-2">區塊 1</h2>
+          <p class="text-gray-600">適用於小螢幕以上。</p>
+        </div>
+        <div
+          class="bg-white p-6 shadow rounded-lg hover:shadow-lg transition-shadow"
+        >
+          <h2 class="text-teal-500 text-xl font-semibold mb-2">區塊 2</h2>
+          <p class="text-gray-600">隨螢幕尺寸動態排列。</p>
+        </div>
+        <div
+          class="bg-white p-6 shadow rounded-lg hover:shadow-lg transition-shadow"
+        >
+          <h2 class="text-teal-500 text-xl font-semibold mb-2">區塊 3</h2>
+          <p class="text-gray-600">適用於中型螢幕以上。</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4 mt-8">
+      <p class="text-sm sm:text-base">響應式設計範例</p>
+    </footer>
+  </body>
+</html>

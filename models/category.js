@@ -9,9 +9,9 @@ module.exports = class Category {
   // CREATE
 
   static add(req, res) {
-
+    console.log(req.body.cname)
     return db.execute(
-      'INSERT INTO category (cname) VALUE (?, ?, ?, ?)',
+      'INSERT INTO category (cname) VALUE (?)',
       [req.body.cname]
     );
   }
